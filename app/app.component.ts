@@ -10,7 +10,9 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 })
 
 export class AppComponent implements OnInit { 
+    test: string = "fuck sake";
+    
     ngOnInit() {
-        console.log("Hallo...");
+        
     }
 }

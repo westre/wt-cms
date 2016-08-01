@@ -9,24 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.test = "fuck sake";
+var DashboardComponent = (function () {
+    function DashboardComponent() {
+        this.title = "Dashboard";
     }
-    AppComponent.prototype.ngOnInit = function () {
+    DashboardComponent.prototype.ngOnInit = function () {
+        this.title = "meh";
     };
-    AppComponent = __decorate([
+    DashboardComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'wt-cms',
-            templateUrl: 'app.component.html',
-            styleUrls: ['app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES]
+            selector: 'dashboard',
+            templateUrl: 'dashboard.component.html',
+            styleUrls: ['dashboard.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], DashboardComponent);
+    return DashboardComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.DashboardComponent = DashboardComponent;
+//# sourceMappingURL=dashboard.component.js.map
