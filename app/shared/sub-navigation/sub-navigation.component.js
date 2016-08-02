@@ -11,11 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var SubNavigationComponent = (function () {
     function SubNavigationComponent() {
-        this.pages = [
-            "test",
-            "test2"
-        ];
+        this.pages = [];
     }
+    SubNavigationComponent.prototype.setPages = function (pages) {
+        this.pages = pages;
+    };
     SubNavigationComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

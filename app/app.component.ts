@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
     constructor(private router: Router, private moduleService: ModuleService, private pageService: PageService) {
         pageService.pageChanged$.subscribe(page => {
             this.headerComponent.setTitle(page.title);
+            this.headerComponent.getSubNavigation().setPages(page.pages);
         });
     }
 

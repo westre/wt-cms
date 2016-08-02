@@ -26,4 +26,8 @@ export class HeaderComponent {
     getNavigation(): NavigationComponent {
         return this.navigationComponent;
     }
+
+    getSubNavigation(): SubNavigationComponent {
+        return this.subNavigationComponent;
+    }
 }

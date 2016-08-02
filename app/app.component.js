@@ -23,6 +23,7 @@ var AppComponent = (function () {
         this.pageService = pageService;
         pageService.pageChanged$.subscribe(function (page) {
             _this.headerComponent.setTitle(page.title);
+            _this.headerComponent.getSubNavigation().setPages(page.pages);
         });
     }
     AppComponent.prototype.ngOnInit = function () {

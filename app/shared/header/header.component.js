@@ -21,6 +21,9 @@ var HeaderComponent = (function () {
     HeaderComponent.prototype.getNavigation = function () {
         return this.navigationComponent;
     };
+    HeaderComponent.prototype.getSubNavigation = function () {
+        return this.subNavigationComponent;
+    };
     __decorate([
         core_1.ViewChild(navigation_component_1.NavigationComponent), 
         __metadata('design:type', navigation_component_1.NavigationComponent)

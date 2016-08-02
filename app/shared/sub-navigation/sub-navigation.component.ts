@@ -8,8 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 
 export class SubNavigationComponent { 
-    pages: string[] = [
-        "test",
-        "test2"
-    ];
+    pages: string[] = [];
+
+    setPages(pages: string[]) : void {
+        this.pages = pages;
+    }
 }
