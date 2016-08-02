@@ -1,0 +1,74 @@
+.content {
+    height: 100%;
+}
+
+h1 {
+    font-size: 42px;
+    display: inline-block;
+    color: white;
+    margin: 2.1rem 0 1.68rem 0;
+}
+
+.header-aside {
+    margin: 2.1rem 0 1.68rem 0;
+    text-align: right;
+}
+
+.entry-cr {
+    position: relative;
+    /*width: 480px;
+    height: 320px;*/
+    font-family: sans-serif;
+    
+    /* The background image */
+    background-image: url('../../assets/images/bg1-min.jpg');
+    background-size: cover;
+    background-position: center center;
+    
+    /*overflow: hidden;*/
+}
+
+header {
+    height: 200px;
+}
+
+.entry-cr:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4a762e;
+
+    /* The gradient */
+    background: -moz-linear-gradient(-45deg,  #4a762e 0%, #2f7881 50%, #69318d 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#4a762e), color-stop(50%,#2f7881), color-stop(100%,#69318d));
+    background: -webkit-linear-gradient(-45deg,  #4a762e 0%,#2f7881 50%,#69318d 100%);
+    background: -o-linear-gradient(-45deg,  #4a762e 0%,#2f7881 50%,#69318d 100%);
+    background: -ms-linear-gradient(-45deg,  #4a762e 0%,#2f7881 50%,#69318d 100%);
+    background: linear-gradient(135deg,  #4a762e 0%,#2f7881 50%,#69318d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a762e', endColorstr='#69318d',GradientType=1 );
+
+    /* The inner-shadow */
+    box-shadow: 0 0 32px hsla(0, 0%, 0%, .15) inset;
+
+    opacity: .85;
+    transition: opacity .25s ease;
+    z-index: 1;
+}
+ 
+.entry-cr:hover:after {
+    opacity: .75;
+}
+
+.entry-link {
+    position: relative;
+    display: block;
+    padding: 16px;
+
+    color: #fff;
+    text-decoration: none;
+    z-index: 2;
+    box-sizing: border-box;
+}

@@ -9,29 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var page_service_1 = require('../../shared/page/page.service');
-var DashboardComponent = (function () {
-    function DashboardComponent(pageService) {
-        this.pageService = pageService;
-        this.title = "Dashboard";
-        this.pages = [
-            "page1",
-            "page2"
-        ];
+var router_1 = require('@angular/router');
+var NavigationComponent = (function () {
+    function NavigationComponent() {
+        this.modules = [];
     }
-    DashboardComponent.prototype.ngOnInit = function () {
-        this.pageService.currentPage(this);
+    NavigationComponent.prototype.addModule = function (module) {
+        this.modules.push(module);
     };
-    DashboardComponent = __decorate([
+    NavigationComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'dashboard',
-            templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            selector: 'navigation',
+            templateUrl: 'navigation.component.html',
+            styleUrls: ['navigation.component.css'],
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [page_service_1.PageService])
-    ], DashboardComponent);
-    return DashboardComponent;
+        __metadata('design:paramtypes', [])
+    ], NavigationComponent);
+    return NavigationComponent;
 }());
-exports.DashboardComponent = DashboardComponent;
-//# sourceMappingURL=dashboard.component.js.map
+exports.NavigationComponent = NavigationComponent;
+//# sourceMappingURL=navigation.component.js.map

@@ -9,29 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var page_service_1 = require('../../shared/page/page.service');
-var DashboardComponent = (function () {
-    function DashboardComponent(pageService) {
-        this.pageService = pageService;
-        this.title = "Dashboard";
+var SubNavigationComponent = (function () {
+    function SubNavigationComponent() {
         this.pages = [
-            "page1",
-            "page2"
+            "test",
+            "test2"
         ];
     }
-    DashboardComponent.prototype.ngOnInit = function () {
-        this.pageService.currentPage(this);
-    };
-    DashboardComponent = __decorate([
+    SubNavigationComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'dashboard',
-            templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            selector: 'sub-navigation',
+            templateUrl: 'sub-navigation.component.html',
+            styleUrls: ['sub-navigation.component.css'],
         }), 
-        __metadata('design:paramtypes', [page_service_1.PageService])
-    ], DashboardComponent);
-    return DashboardComponent;
+        __metadata('design:paramtypes', [])
+    ], SubNavigationComponent);
+    return SubNavigationComponent;
 }());
-exports.DashboardComponent = DashboardComponent;
-//# sourceMappingURL=dashboard.component.js.map
+exports.SubNavigationComponent = SubNavigationComponent;
+//# sourceMappingURL=sub-navigation.component.js.map

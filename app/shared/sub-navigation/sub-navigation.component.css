@@ -1,0 +1,33 @@
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a {
+    background-color: transparent;
+}
+
+li {
+    text-transform: uppercase;
+}
+
+li > a {
+    color: #ABD3FF;
+}
+
+.active {
+    border-bottom: 2px solid #FF9A00;
+}
+
+.nav-link {
+    border-radius: 0px !important;
+}
+
+.entry-link {
+    position: relative;
+    display: block;
+
+    color: #fff;
+    text-decoration: none;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+#sub-navigation-tab {
+    margin-top: 36px;
+}

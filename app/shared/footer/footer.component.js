@@ -9,29 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var page_service_1 = require('../../shared/page/page.service');
-var DashboardComponent = (function () {
-    function DashboardComponent(pageService) {
-        this.pageService = pageService;
-        this.title = "Dashboard";
-        this.pages = [
-            "page1",
-            "page2"
-        ];
+var FooterComponent = (function () {
+    function FooterComponent() {
     }
-    DashboardComponent.prototype.ngOnInit = function () {
-        this.pageService.currentPage(this);
-    };
-    DashboardComponent = __decorate([
+    FooterComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'dashboard',
-            templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            selector: 'footer',
+            templateUrl: 'footer.component.html',
+            styleUrls: ['footer.component.css'],
         }), 
-        __metadata('design:paramtypes', [page_service_1.PageService])
-    ], DashboardComponent);
-    return DashboardComponent;
+        __metadata('design:paramtypes', [])
+    ], FooterComponent);
+    return FooterComponent;
 }());
-exports.DashboardComponent = DashboardComponent;
-//# sourceMappingURL=dashboard.component.js.map
+exports.FooterComponent = FooterComponent;
+//# sourceMappingURL=footer.component.js.map

@@ -1,0 +1,15 @@
+<div class="dropdown">
+    <i class="fa fa-th fa-2x navigation-menu-image color-complement-1 dropdown-toggle" id="navigation-menu" data-toggle="dropdown"></i>
+    <ul class="dropdown-menu color-text">
+        <li>
+            <div class="row navigation-grid">                   
+                <a *ngFor="let module of modules" class="col-sm-4 navigation-grid-item navigation-grid-item-padding" [routerLink]="module.routerUrl">
+                    <div class="navigation-grid-item-box">
+                        <i class="fa {{ module.image }} fa-2x color-complement-0"></i><br/>
+                        {{ module.name }}
+                    </div>
+                </a>                                              
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,42 @@
+.color-primary-0 { color: #1483FF }	/* Main Primary color */
+.color-primary-1 { color: #ABD3FF }
+.color-primary-2 { color: #7BBAFF }
+.color-primary-3 { color: #00438E }
+.color-primary-4 { color: #00336D }
+
+.color-complement-0 { color: #FF9A00 }	/* Main Complement color */
+.color-complement-1 { color: #FFDBA4 }
+.color-complement-2 { color: #FFC770 }
+.color-complement-3 { color: #D98300 }
+.color-complement-4 { color: #A76500 }
+
+.bg-color-primary-0 { background-color: #1483FF }	/* Main Primary color */
+.bg-color-primary-1 { background-color: #ABD3FF }
+.bg-color-primary-2 { background-color: #7BBAFF }
+.bg-color-primary-3 { background-color: #00438E }
+.bg-color-primary-4 { background-color: #00336D }
+
+.bg-color-complement-0 { background-color: #FF9A00 }	/* Main Complement color */
+.bg-color-complement-1 { background-color: #FFDBA4 }
+.bg-color-complement-2 { background-color: #FFC770 }
+.bg-color-complement-3 { background-color: #D98300 }
+.bg-color-complement-4 { background-color: #A76500 }
+
+.color-text { color: #424242 }
+.color-background { background-color: #fafafa }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+main {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    /* 150px for the header, 50px for the footer + margin (50px) */
+    height: calc(100% - 150px - 100px);
+
+    /* Margin bottom by footer height */
+    margin-bottom: 50px;
+}

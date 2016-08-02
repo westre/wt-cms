@@ -1,0 +1,7 @@
+<ul class="nav nav-pills entry-link" id="sub-navigation-tab" role="tablist">
+    <li *ngFor="let page of pages; let isFirst = first" class="nav-item">
+        <a class="nav-link" [class.active]="isFirst" data-toggle="tab" href="#{{ page }}">{{ page }}</a>
+    </li>
+</ul>
+
+
