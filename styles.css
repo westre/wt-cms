@@ -40,3 +40,7 @@ main {
     /* Margin bottom by footer height */
     margin-bottom: 50px;
 }
+
+.no-padding {
+    padding: 0 !important;
+}
