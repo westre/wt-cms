@@ -9,24 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TestComponent = (function () {
-    function TestComponent() {
-        this.title = "Dashboard";
+var page_service_1 = require('../../shared/page/page.service');
+var SettingsComponent = (function () {
+    function SettingsComponent(pageService) {
+        this.pageService = pageService;
+        this.title = "settings";
+        this.pages = [
+            "page1",
+            "page2"
+        ];
     }
-    TestComponent.prototype.ngOnInit = function () {
-        this.title = "meh";
-        console.log("Nesdsdee");
+    SettingsComponent.prototype.ngOnInit = function () {
+        this.pageService.currentPage(this);
     };
-    TestComponent = __decorate([
+    SettingsComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'dashboard',
-            templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            selector: 'settings',
+            templateUrl: 'settings.component.html',
+            styleUrls: ['settings.component.css']
         }), 
-        __metadata('design:paramtypes', [])
-    ], TestComponent);
-    return TestComponent;
+        __metadata('design:paramtypes', [page_service_1.PageService])
+    ], SettingsComponent);
+    return SettingsComponent;
 }());
-exports.TestComponent = TestComponent;
-//# sourceMappingURL=test.component.js.map
+exports.SettingsComponent = SettingsComponent;
+//# sourceMappingURL=settings.component.js.map
