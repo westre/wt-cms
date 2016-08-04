@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
         let systemModules = this.moduleService.getModules();
 
         for(let systemModule of systemModules) {
-            this.headerComponent.getNavigation().addModule(systemModule.module);
+            this.headerComponent.getNavigation().addModule(systemModule);
         }
     }
 }

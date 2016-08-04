@@ -7,10 +7,11 @@ var __extends = (this && this.__extends) || function (d, b) {
 var module_entity_1 = require('./module.entity');
 var SystemModule = (function (_super) {
     __extends(SystemModule, _super);
-    function SystemModule(component, module) {
+    function SystemModule(component, module, url) {
         _super.call(this);
         this.component = component;
         this.module = module;
+        this.url = url;
     }
     return SystemModule;
 }(module_entity_1.Module));

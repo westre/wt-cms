@@ -30,7 +30,7 @@ var AppComponent = (function () {
         var systemModules = this.moduleService.getModules();
         for (var _i = 0, systemModules_1 = systemModules; _i < systemModules_1.length; _i++) {
             var systemModule = systemModules_1[_i];
-            this.headerComponent.getNavigation().addModule(systemModule.module);
+            this.headerComponent.getNavigation().addModule(systemModule);
         }
     };
     __decorate([

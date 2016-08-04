@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { Module } from '../module/module.entity';
+import { SystemModule } from '../module/system-module.entity';
 
 @Component({
     moduleId: module.id,
@@ -11,9 +11,9 @@ import { Module } from '../module/module.entity';
 })
 
 export class NavigationComponent {
-    modules: Module[] = [];
+    modules: SystemModule[] = [];
 
-    addModule(module: Module): void {
+    addModule(module: SystemModule): void {
         this.modules.push(module);
     }
 }
