@@ -1,5 +1,11 @@
 import { Module } from './module.entity';
 
-export interface SubModule extends Module {
-    parent: Module;
+export class SubModule extends Module {
+    parentModule: Module;
+
+    constructor(name: string, version: string, image: string, parentModule: Module) {
+        super(name, version, image);
+
+        this.parentModule = parentModule;
+    }
 }

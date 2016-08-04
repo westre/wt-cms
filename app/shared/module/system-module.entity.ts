@@ -2,14 +2,12 @@ import { Module } from './module.entity';
 
 export class SystemModule extends Module {
     component: string;
-    module: Module;
     url: string;
 
     constructor(component: string, module: Module, url: string) {
-        super();
+        super(module.name, module.version, module.image);
         
         this.component = component;
-        this.module = module;
         this.url = url;
     }
 }

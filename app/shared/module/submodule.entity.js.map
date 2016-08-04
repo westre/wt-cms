@@ -1,1 +1,1 @@
-{"version":3,"file":"submodule.entity.js","sourceRoot":"","sources":["submodule.entity.ts"],"names":[],"mappings":""}
+{"version":3,"file":"submodule.entity.js","sourceRoot":"","sources":["submodule.entity.ts"],"names":[],"mappings":";;;;;;AAAA,8BAAuB,iBAAiB,CAAC,CAAA;AAEzC;IAA+B,6BAAM;IAGjC,mBAAY,IAAY,EAAE,OAAe,EAAE,KAAa,EAAE,YAAoB;QAC1E,kBAAM,IAAI,EAAE,OAAO,EAAE,KAAK,CAAC,CAAC;QAE5B,IAAI,CAAC,YAAY,GAAG,YAAY,CAAC;IACrC,CAAC;IACL,gBAAC;AAAD,CAAC,AARD,CAA+B,sBAAM,GAQpC;AARY,iBAAS,YAQrB,CAAA"}

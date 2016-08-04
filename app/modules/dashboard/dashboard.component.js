@@ -17,6 +17,7 @@ var core_1 = require('@angular/core');
 var page_service_1 = require('../../shared/page/page.service');
 var module_service_1 = require('../../shared/module/module.service');
 var module_entity_1 = require('../../shared/module/module.entity');
+var dashboard_news_component_1 = require('./submodules/news/dashboard-news.component');
 var DashboardComponent = (function (_super) {
     __extends(DashboardComponent, _super);
     function DashboardComponent(pageService, moduleService) {
@@ -38,7 +39,8 @@ var DashboardComponent = (function (_super) {
             moduleId: module.id,
             selector: 'dashboard',
             templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            styleUrls: ['dashboard.component.css'],
+            directives: [dashboard_news_component_1.DashboardNewsComponent]
         }), 
         __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService])
     ], DashboardComponent);

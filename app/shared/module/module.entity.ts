@@ -8,9 +8,9 @@ export class Module {
     // god this stupid constructor overloading...
     constructor(nameOrSystemModule?: string | SystemModule, version?: string, image?: string) {
         if (typeof nameOrSystemModule === "object") {
-            this.name = nameOrSystemModule.module.name;
-            this.version = nameOrSystemModule.module.version;
-            this.image = nameOrSystemModule.module.image;
+            this.name = nameOrSystemModule.name;
+            this.version = nameOrSystemModule.version;
+            this.image = nameOrSystemModule.image;
         } 
         else if (typeof nameOrSystemModule === "string") {
             this.name = nameOrSystemModule;
@@ -20,8 +20,8 @@ export class Module {
     }
 
     protected initialize(systemModule: SystemModule): void {
-        this.name = systemModule.module.name;
-        this.version = systemModule.module.version;
-        this.image = systemModule.module.image;
+        this.name = systemModule.name;
+        this.version = systemModule.version;
+        this.image = systemModule.image;
     }
 }

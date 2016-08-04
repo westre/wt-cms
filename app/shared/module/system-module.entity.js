@@ -8,9 +8,8 @@ var module_entity_1 = require('./module.entity');
 var SystemModule = (function (_super) {
     __extends(SystemModule, _super);
     function SystemModule(component, module, url) {
-        _super.call(this);
+        _super.call(this, module.name, module.version, module.image);
         this.component = component;
-        this.module = module;
         this.url = url;
     }
     return SystemModule;

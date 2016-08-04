@@ -4,11 +4,14 @@ import { ModuleService } from '../../shared/module/module.service';
 import { Page } from '../../shared/page/page.interface';
 import { Module } from '../../shared/module/module.entity';
 
+import { DashboardNewsComponent } from './submodules/news/dashboard-news.component';
+
 @Component({
     moduleId: module.id,
     selector: 'dashboard',
     templateUrl: 'dashboard.component.html',
-    styleUrls: ['dashboard.component.css']
+    styleUrls: ['dashboard.component.css'],
+    directives: [DashboardNewsComponent]
 })
 
 export class DashboardComponent extends Module implements OnInit, Page { 
