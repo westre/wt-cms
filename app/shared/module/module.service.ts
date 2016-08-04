@@ -15,11 +15,14 @@ export class ModuleService {
         ]
     }
 
-    getModule(instance: Module): SystemModule {
+    getModule(instance: Module | string): SystemModule {
         let systemModules = this.getModules();
 
         for (let systemModule of systemModules) {
-            if(systemModule.component === instance.constructor.name) {
+            if(instance instanceof Module && systemModule.component === instance.constructor.name) {
+                return systemModule;
+            }
+            else if(systemModule.component === instance) {
                 return systemModule;
             }
         }
