@@ -1,0 +1,16 @@
+<div class="col-sm-4">
+    <div class="card card-inverse no-overflow">
+        <img class="card-img" src="{{ image }}" alt="Card image">
+        <div class="card-img-overlay"
+        [class.dawn]="state == 0"
+        [class.noon]="state == 1"
+        [class.night]="state == 2">
+            <div class="entry-link">
+                <h2 class="card-title">{{ time }}</h2>
+                <p class="card-text">
+                    Hallo! :)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

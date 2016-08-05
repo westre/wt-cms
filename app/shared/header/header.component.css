@@ -14,6 +14,11 @@ h1 {
     text-align: right;
 }
 
+
+header {
+    height: 200px;
+}
+
 .entry-cr {
     position: relative;
     /*width: 480px;
@@ -26,10 +31,6 @@ h1 {
     background-position: center center;
     
     /*overflow: hidden;*/
-}
-
-header {
-    height: 200px;
 }
 
 .entry-cr:after {

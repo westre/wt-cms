@@ -1,0 +1,12 @@
+.btn-readmore:hover {
+    color: white;
+}
+
+.white {
+    color: white;
+}
+
+.news-item-past {
+    border-left: 0px;
+    border-right: 0px;
+}
