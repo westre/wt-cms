@@ -6,13 +6,14 @@ import { Module } from '../../shared/module/module.entity';
 
 import { DashboardNewsComponent } from './submodules/news/dashboard-news.component';
 import { DashboardClockComponent } from './submodules/clock/dashboard-clock.component';
+import { DashboardGenericComponent } from './submodules/generic/dashboard-generic.component';
 
 @Component({
     moduleId: module.id,
     selector: 'dashboard',
     templateUrl: 'dashboard.component.html',
     styleUrls: ['dashboard.component.css'],
-    directives: [DashboardNewsComponent, DashboardClockComponent]
+    directives: [DashboardNewsComponent, DashboardClockComponent, DashboardGenericComponent]
 })
 
 export class DashboardComponent extends Module implements OnInit, Page { 

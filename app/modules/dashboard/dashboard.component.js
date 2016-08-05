@@ -19,6 +19,7 @@ var module_service_1 = require('../../shared/module/module.service');
 var module_entity_1 = require('../../shared/module/module.entity');
 var dashboard_news_component_1 = require('./submodules/news/dashboard-news.component');
 var dashboard_clock_component_1 = require('./submodules/clock/dashboard-clock.component');
+var dashboard_generic_component_1 = require('./submodules/generic/dashboard-generic.component');
 var DashboardComponent = (function (_super) {
     __extends(DashboardComponent, _super);
     function DashboardComponent(pageService, moduleService) {
@@ -41,7 +42,7 @@ var DashboardComponent = (function (_super) {
             selector: 'dashboard',
             templateUrl: 'dashboard.component.html',
             styleUrls: ['dashboard.component.css'],
-            directives: [dashboard_news_component_1.DashboardNewsComponent, dashboard_clock_component_1.DashboardClockComponent]
+            directives: [dashboard_news_component_1.DashboardNewsComponent, dashboard_clock_component_1.DashboardClockComponent, dashboard_generic_component_1.DashboardGenericComponent]
         }), 
         __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService])
     ], DashboardComponent);
