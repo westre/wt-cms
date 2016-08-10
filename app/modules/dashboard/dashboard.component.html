@@ -1,10 +1,16 @@
 <div class="tab-content">
     <div class="tab-pane active" id="index" role="tabpanel">
-        <div class="card-columns">
-            <dashboard-news></dashboard-news>
-            <dashboard-clock></dashboard-clock>
-            <dashboard-generic [value]="'3'" [message]="'Geregistreerde gebruikers binnen het beheersinterface'"></dashboard-generic>
-            <dashboard-generic [value]="'3'" [message]="'Geinstalleerde modules op deze website'"></dashboard-generic>
+        <div class="row">
+            <div class="col-sm-4">
+                <dashboard-news></dashboard-news>
+            </div>
+            <div class="col-sm-4">
+                <dashboard-generic [value]="'3'" [message]="'Geregistreerde gebruikers binnen het beheersinterface'"></dashboard-generic>
+                <dashboard-generic [value]="'3'" [message]="'Geinstalleerde modules op deze website'"></dashboard-generic>
+            </div>
+            <div class="col-sm-4">
+                <dashboard-clock></dashboard-clock>
+            </div>
         </div>
     </div>
     <div class="tab-pane" id="info" role="tabpanel">

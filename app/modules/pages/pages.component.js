@@ -18,6 +18,8 @@ var page_service_1 = require('../../shared/page/page.service');
 var module_service_1 = require('../../shared/module/module.service');
 var module_entity_1 = require('../../shared/module/module.entity');
 var subnavigation_entity_1 = require('../../shared/sub-navigation/subnavigation.entity');
+var ng2_ckeditor_1 = require('ng2-ckeditor');
+var ng2_dragula_1 = require('ng2-dragula/ng2-dragula');
 var PagesComponent = (function (_super) {
     __extends(PagesComponent, _super);
     function PagesComponent(pageService, moduleService) {
@@ -29,6 +31,7 @@ var PagesComponent = (function (_super) {
             new subnavigation_entity_1.SubNavigation("overview", "Paginaoverzicht"),
             new subnavigation_entity_1.SubNavigation("add", "Nieuwe pagina toevoegen")
         ];
+        this.content = "Hello world!";
     }
     PagesComponent.prototype.ngOnInit = function () {
         this.pageService.currentPage(this);
@@ -38,7 +41,9 @@ var PagesComponent = (function (_super) {
             moduleId: module.id,
             selector: 'pages',
             templateUrl: 'pages.component.html',
-            styleUrls: ['pages.component.css']
+            styleUrls: ['pages.component.css'],
+            directives: [ng2_ckeditor_1.CKEditor, ng2_dragula_1.Dragula],
+            viewProviders: [ng2_dragula_1.DragulaService]
         }), 
         __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService])
     ], PagesComponent);

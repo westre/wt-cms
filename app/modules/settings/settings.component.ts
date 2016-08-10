@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PageService } from '../../shared/page/page.service';
 import { Page } from '../../shared/page/page.interface';
+import { SubNavigation } from '../../shared/sub-navigation/subnavigation.entity';
 
 @Component({
     moduleId: module.id,
@@ -11,9 +12,9 @@ import { Page } from '../../shared/page/page.interface';
 
 export class SettingsComponent implements OnInit, Page { 
     title: string = "settings";
-    pages: string[] = [
-        "page1",
-        "page2"
+    pages: SubNavigation[] = [
+        new SubNavigation("index", "Index"),
+        new SubNavigation("info", "Informatie")
     ];
 
     constructor(private pageService: PageService) {

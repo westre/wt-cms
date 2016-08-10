@@ -10,13 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var page_service_1 = require('../../shared/page/page.service');
+var subnavigation_entity_1 = require('../../shared/sub-navigation/subnavigation.entity');
 var FilesComponent = (function () {
     function FilesComponent(pageService) {
         this.pageService = pageService;
         this.title = "Files";
         this.pages = [
-            "page1",
-            "page2"
+            new subnavigation_entity_1.SubNavigation("index", "Index"),
+            new subnavigation_entity_1.SubNavigation("info", "Informatie")
         ];
     }
     FilesComponent.prototype.ngOnInit = function () {

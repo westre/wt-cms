@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SubNavigation } from './subnavigation.entity'
 
 @Component({
     moduleId: module.id,
@@ -8,9 +9,9 @@ import { Component, Input } from '@angular/core';
 })
 
 export class SubNavigationComponent { 
-    pages: string[] = [];
+    pages: SubNavigation[] = [];
 
-    setPages(pages: string[]) : void {
+    setPages(pages: SubNavigation[]) : void {
         this.pages = pages;
     }
 }
