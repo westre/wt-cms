@@ -7,6 +7,7 @@ import { SubNavigation } from '../../shared/sub-navigation/subnavigation.entity'
 
 import { CKEditor } from 'ng2-ckeditor';
 import { Dragula, DragulaService } from 'ng2-dragula/ng2-dragula';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
     moduleId: module.id,
@@ -14,7 +15,8 @@ import { Dragula, DragulaService } from 'ng2-dragula/ng2-dragula';
     templateUrl: 'pages.component.html',
     styleUrls: ['pages.component.css'],
     directives: [CKEditor, Dragula],
-    viewProviders: [DragulaService]
+    viewProviders: [DragulaService],
+    providers: [ToastsManager]
 })
 
 export class PagesComponent extends Module implements OnInit, Page { 
@@ -26,8 +28,17 @@ export class PagesComponent extends Module implements OnInit, Page {
 
     content: string = "Hello world!";
 
-    constructor(private pageService: PageService, private moduleService: ModuleService) {
+    constructor(private pageService: PageService, private moduleService: ModuleService, private dragulaService: DragulaService, private toastrService: ToastsManager) {
         super(moduleService.getModule("PagesComponent"));
+
+        dragulaService.drop.subscribe((value) => {
+            this.onDrop(value.slice(1));
+        });
+    }
+
+    private onDrop(args) {
+        console.log(args);
+        this.toastrService.success("Pagina succesvol van volgorde veranderd", "Succes");
     }
 
     ngOnInit() {

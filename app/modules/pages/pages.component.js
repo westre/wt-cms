@@ -20,19 +20,30 @@ var module_entity_1 = require('../../shared/module/module.entity');
 var subnavigation_entity_1 = require('../../shared/sub-navigation/subnavigation.entity');
 var ng2_ckeditor_1 = require('ng2-ckeditor');
 var ng2_dragula_1 = require('ng2-dragula/ng2-dragula');
+var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
 var PagesComponent = (function (_super) {
     __extends(PagesComponent, _super);
-    function PagesComponent(pageService, moduleService) {
+    function PagesComponent(pageService, moduleService, dragulaService, toastrService) {
+        var _this = this;
         _super.call(this, moduleService.getModule("PagesComponent"));
         this.pageService = pageService;
         this.moduleService = moduleService;
+        this.dragulaService = dragulaService;
+        this.toastrService = toastrService;
         this.title = "Paginabeheer";
         this.pages = [
             new subnavigation_entity_1.SubNavigation("overview", "Paginaoverzicht"),
             new subnavigation_entity_1.SubNavigation("add", "Nieuwe pagina toevoegen")
         ];
         this.content = "Hello world!";
+        dragulaService.drop.subscribe(function (value) {
+            _this.onDrop(value.slice(1));
+        });
     }
+    PagesComponent.prototype.onDrop = function (args) {
+        console.log(args);
+        this.toastrService.success("Pagina succesvol van volgorde veranderd", "Succes");
+    };
     PagesComponent.prototype.ngOnInit = function () {
         this.pageService.currentPage(this);
     };
@@ -43,9 +54,10 @@ var PagesComponent = (function (_super) {
             templateUrl: 'pages.component.html',
             styleUrls: ['pages.component.css'],
             directives: [ng2_ckeditor_1.CKEditor, ng2_dragula_1.Dragula],
-            viewProviders: [ng2_dragula_1.DragulaService]
+            viewProviders: [ng2_dragula_1.DragulaService],
+            providers: [ng2_toastr_1.ToastsManager]
         }), 
-        __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService])
+        __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService, ng2_dragula_1.DragulaService, ng2_toastr_1.ToastsManager])
     ], PagesComponent);
     return PagesComponent;
 }(module_entity_1.Module));

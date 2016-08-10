@@ -1,33 +1,25 @@
-.wrapper2 {
-    display: table;
+.bg-color-primary-0 {
+    z-index: 1;
+    background-color: #1483FF;
 }
 
-.container2 {
-    display: table-cell;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 50%;
+.bg-color-primary-0 h5, h5 {
+    display: inline-block;
 }
 
-.container2:nth-child(odd) {
-    background-color: rgba(0, 0, 0, 0.2);
+.bg-color-primary-0 h5 {
+    color: white;
 }
 
-.container2 div, .gu-mirror {
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 0.4s ease-in-out;
+.bg-color-primary-0 p {
+    color: #ABD3FF;
 }
 
-.container2 div {
-    cursor: move;
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+.submenu-list-group {
+    margin-top: 25px;
 }
 
-.gu-mirror {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
+.handle {
+    color: white;
+    width: 20px;
 }

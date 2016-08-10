@@ -1,21 +1,36 @@
 <div class="tab-content">
     <div class="tab-pane active" id="overview" role="tabpanel">
-        
+        <p>
+            Hier zie je een overzicht van alle pagina's binnen deze website. 
+            Om de volgorde van de pagina's te veranderen hoef je alleen de linkermuisknop in te houden op de pagina in kwestie en kun je het vervolgens slepen om zo het gewenste resultaat te bereiken.
+        </p>
+        <div class="list-group">
+            <div [dragula]='"menu-bag"'>
+                <a href="#" class="list-group-item list-group-item-action bg-color-primary-0">
+                    <h5 class="list-group-item-heading">Home</h5>
+                    <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
+                    <p class="list-group-item-text">Module iconen hier</p>
+                </a>
+            </div>
+            <div [dragula]='"menu-bag"'>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <h5 class="list-group-item-heading">About us</h5>
+                    <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
+                    <p class="list-group-item-text">Module iconen hier</p>
+                </a>
+            </div>
+            <div [dragula]='"menu-bag"'>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <h5 class="list-group-item-heading">Contact us</h5>
+                    <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
+                    <p class="list-group-item-text">Module iconen hier</p>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="tab-pane" id="add" role="tabpanel">
         <p>
             Welkom op de dashboard van deze CMS (Content Management System).
         </p>
-
-        <div>
-            <div class='wrapper2'>
-                <div class='container2' [dragula]='"first-bag"'>
-                    <div>Drag/drop item 1</div>
-                </div>
-                <div class='container2' [dragula]='"first-bag"'>
-                    <div>Drag/drop item 2</div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>

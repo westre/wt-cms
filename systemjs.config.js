@@ -14,6 +14,7 @@
         'ng2-ckeditor': 'node_modules/ng2-ckeditor',
         'dragula': 'node_modules/dragula/dist/dragula.js',
         'ng2-dragula': 'node_modules/ng2-dragula',
+        'ng2-toastr': 'node_modules/ng2-toastr',
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
@@ -24,6 +25,7 @@
         // added
         'ng2-ckeditor': { main: 'lib/CKEditor.js', defaultExtension: 'js' },
         'ng2-dragula': { main: 'src/ng2-dragula.js', defaultExtension: 'js' },
+        'ng2-toastr': { main: 'bundles/ng2-toastr.js', defaultExtension: 'js' },
     };
     var ngPackageNames = [
         'common',
