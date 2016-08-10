@@ -21,6 +21,7 @@ var subnavigation_entity_1 = require('../../shared/sub-navigation/subnavigation.
 var ng2_ckeditor_1 = require('ng2-ckeditor');
 var ng2_dragula_1 = require('ng2-dragula/ng2-dragula');
 var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
+var web_page_entity_1 = require('./web-page.entity');
 var PagesComponent = (function (_super) {
     __extends(PagesComponent, _super);
     function PagesComponent(pageService, moduleService, dragulaService, toastrService) {
@@ -35,14 +36,22 @@ var PagesComponent = (function (_super) {
             new subnavigation_entity_1.SubNavigation("overview", "Paginaoverzicht"),
             new subnavigation_entity_1.SubNavigation("add", "Nieuwe pagina toevoegen")
         ];
+        this.webPages = [
+            new web_page_entity_1.WebPage("w1"),
+            new web_page_entity_1.WebPage("w2"),
+            new web_page_entity_1.WebPage("w3"),
+            new web_page_entity_1.WebPage("w4"),
+        ];
         this.content = "Hello world!";
         dragulaService.drop.subscribe(function (value) {
             _this.onDrop(value.slice(1));
         });
     }
     PagesComponent.prototype.onDrop = function (args) {
-        console.log(args);
-        this.toastrService.success("Pagina succesvol van volgorde veranderd", "Succes");
+        var e = args[0], el = args[1];
+        console.log(e.id);
+        var webPage = this.webPages[e.id];
+        this.toastrService.success("Pagina succesvol van volgorde veranderd", webPage.title);
     };
     PagesComponent.prototype.ngOnInit = function () {
         this.pageService.currentPage(this);

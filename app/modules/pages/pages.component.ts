@@ -9,6 +9,8 @@ import { CKEditor } from 'ng2-ckeditor';
 import { Dragula, DragulaService } from 'ng2-dragula/ng2-dragula';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
+import { WebPage } from './web-page.entity';
+
 @Component({
     moduleId: module.id,
     selector: 'pages',
@@ -26,6 +28,13 @@ export class PagesComponent extends Module implements OnInit, Page {
         new SubNavigation("add", "Nieuwe pagina toevoegen")
     ];
 
+    webPages: WebPage[] = [
+        new WebPage("w1"),
+        new WebPage("w2"),
+        new WebPage("w3"),
+        new WebPage("w4"),
+    ];
+
     content: string = "Hello world!";
 
     constructor(private pageService: PageService, private moduleService: ModuleService, private dragulaService: DragulaService, private toastrService: ToastsManager) {
@@ -37,9 +46,14 @@ export class PagesComponent extends Module implements OnInit, Page {
     }
 
     private onDrop(args) {
-        console.log(args);
-        this.toastrService.success("Pagina succesvol van volgorde veranderd", "Succes");
+        let [e, el] = args;
+        console.log(e.id);
+
+        let webPage: WebPage = this.webPages[e.id];
+
+        this.toastrService.success("Pagina succesvol van volgorde veranderd", webPage.title);
     }
+
 
     ngOnInit() {
         this.pageService.currentPage(this);

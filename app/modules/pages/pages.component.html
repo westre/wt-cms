@@ -6,25 +6,13 @@
         </p>
         <div class="list-group">
             <div [dragula]='"menu-bag"'>
-                <a href="#" class="list-group-item list-group-item-action bg-color-primary-0">
-                    <h5 class="list-group-item-heading">Home</h5>
-                    <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
-                    <p class="list-group-item-text">Module iconen hier</p>
-                </a>
-            </div>
-            <div [dragula]='"menu-bag"'>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <h5 class="list-group-item-heading">About us</h5>
-                    <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
-                    <p class="list-group-item-text">Module iconen hier</p>
-                </a>
-            </div>
-            <div [dragula]='"menu-bag"'>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <h5 class="list-group-item-heading">Contact us</h5>
-                    <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
-                    <p class="list-group-item-text">Module iconen hier</p>
-                </a>
+                <div *ngFor='let webPage of webPages; let i = index' id="{{ i }}">
+                    <a href="#" class="list-group-item list-group-item-action" id="lell">
+                        <h5 class="list-group-item-heading">{{ webPage.title }}</h5>
+                        <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
+                        <p class="list-group-item-text">Module iconen hier</p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
