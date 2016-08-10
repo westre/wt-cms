@@ -40,6 +40,9 @@ export class PagesComponent extends Module implements OnInit, Page {
     constructor(private pageService: PageService, private moduleService: ModuleService, private dragulaService: DragulaService, private toastrService: ToastsManager) {
         super(moduleService.getModule("PagesComponent"));
 
+        // test
+        this.webPages[1].isHomePage = true;
+
         dragulaService.drop.subscribe((value) => {
             this.onDrop(value.slice(1));
         });

@@ -43,6 +43,8 @@ var PagesComponent = (function (_super) {
             new web_page_entity_1.WebPage("w4"),
         ];
         this.content = "Hello world!";
+        // test
+        this.webPages[1].isHomePage = true;
         dragulaService.drop.subscribe(function (value) {
             _this.onDrop(value.slice(1));
         });

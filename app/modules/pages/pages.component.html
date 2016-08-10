@@ -7,7 +7,7 @@
         <div class="list-group">
             <div [dragula]='"menu-bag"'>
                 <div *ngFor='let webPage of webPages; let i = index' id="{{ i }}">
-                    <a href="#" class="list-group-item list-group-item-action" id="lell">
+                    <a href="#" class="list-group-item list-group-item-action" [class.bg-color-primary-0]="webPage.isHomePage">
                         <h5 class="list-group-item-heading">{{ webPage.title }}</h5>
                         <span class="tag tag-pill pull-xs-right tag-default">0 subpagina's</span>
                         <p class="list-group-item-text">Module iconen hier</p>
