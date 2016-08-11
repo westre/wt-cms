@@ -1,3 +1,63 @@
-<p>
-    hallo
-</p>
+<div class="row">
+    <div class="col-sm-12">
+        {{ diagnostic }}
+        <div class="page-options-header form-inline">
+            De titel van deze pagina is <input type="text" class="form-control form-control-sm" [(ngModel)]="webPage.title" required /> en heeft in totaal 
+            <input class="form-control form-control-sm" type="number" [(ngModel)]="webPage.rows" required> rijen en 
+            <input class="form-control form-control-sm" type="number" [(ngModel)]="webPage.columns" required> kolommen welke als "blokken" fungeren binnen deze pagina.
+            
+            Wat betreft de volgorde van de pagina's; zal deze pagina 
+            <select class="form-control form-control-sm" [(ngModel)]="webPage.position" required>
+                <option [ngValue]="false">voor {{ allWebPages[0].title }}</option>
+                <option *ngFor="let page of allWebPages" [ngValue]="page">na {{page.title}}</option>
+            </select>
+            worden geplaatst.
+            
+            Tevens staat deze pagina als 
+            <select class="form-control form-control-sm" [(ngModel)]="webPage.active" required>
+                <option [ngValue]="true">actief</option>
+                <option [ngValue]="false">non-actief</option>
+            </select>
+            ingesteld en is het
+            <select class="form-control form-control-sm" [(ngModel)]="webPage.homePage" required>
+                <option [ngValue]="true">geen</option>
+                <option [ngValue]="false">de</option>
+            </select>
+            homepage van deze website.
+        </div>
+    </div>
+    <div class="col-sm-8">
+       asd
+    </div>
+    <div class="col-sm-4">
+       asd
+    </div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

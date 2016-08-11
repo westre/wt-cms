@@ -10,6 +10,7 @@ import { Dragula, DragulaService } from 'ng2-dragula/ng2-dragula';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import { WebPage } from './web-page.entity';
+import { WebPageService } from '../../shared/web-page/web-page.service';
 
 @Component({
     moduleId: module.id,
@@ -18,7 +19,7 @@ import { WebPage } from './web-page.entity';
     styleUrls: ['add-page.component.css'],
     directives: [CKEditor, Dragula],
     viewProviders: [DragulaService],
-    providers: [ToastsManager]
+    providers: [WebPageService]
 })
 
 export class AddPageComponent extends Module implements OnInit, Page { 
@@ -28,11 +29,25 @@ export class AddPageComponent extends Module implements OnInit, Page {
         new SubNavigation("pages/add", "Pagina toevoegen", true)
     ];
 
-    constructor(private pageService: PageService, private moduleService: ModuleService, private dragulaService: DragulaService, private toastrService: ToastsManager) {
+    webPage: WebPage;
+    allWebPages: WebPage[];
+
+    constructor(
+    private pageService: PageService, 
+    private moduleService: ModuleService, 
+    private dragulaService: DragulaService, 
+    private toastrService: ToastsManager,
+    private webPageService: WebPageService) {
+
         super(moduleService.getModule("PagesComponent"));
+
+        this.webPage = new WebPage("");
+        this.allWebPages = webPageService.getWebPages();
     }
 
     ngOnInit() {
         this.pageService.currentPage(this);
     }
+
+    get diagnostic() { return JSON.stringify(this.webPage); }
 }

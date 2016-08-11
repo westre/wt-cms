@@ -60,7 +60,7 @@ h1 {
 }
  
 .entry-cr:hover:after {
-    opacity: .75;
+    /*opacity: .75;*/
 }
 
 .entry-link {

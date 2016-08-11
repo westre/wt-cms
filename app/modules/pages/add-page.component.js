@@ -21,23 +21,33 @@ var subnavigation_entity_1 = require('../../shared/sub-navigation/subnavigation.
 var ng2_ckeditor_1 = require('ng2-ckeditor');
 var ng2_dragula_1 = require('ng2-dragula/ng2-dragula');
 var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
+var web_page_entity_1 = require('./web-page.entity');
+var web_page_service_1 = require('../../shared/web-page/web-page.service');
 var AddPageComponent = (function (_super) {
     __extends(AddPageComponent, _super);
-    function AddPageComponent(pageService, moduleService, dragulaService, toastrService) {
+    function AddPageComponent(pageService, moduleService, dragulaService, toastrService, webPageService) {
         _super.call(this, moduleService.getModule("PagesComponent"));
         this.pageService = pageService;
         this.moduleService = moduleService;
         this.dragulaService = dragulaService;
         this.toastrService = toastrService;
+        this.webPageService = webPageService;
         this.title = "Paginabeheer - tt";
         this.pages = [
             new subnavigation_entity_1.SubNavigation("pages/", "Paginaoverzicht", false),
             new subnavigation_entity_1.SubNavigation("pages/add", "Pagina toevoegen", true)
         ];
+        this.webPage = new web_page_entity_1.WebPage("");
+        this.allWebPages = webPageService.getWebPages();
     }
     AddPageComponent.prototype.ngOnInit = function () {
         this.pageService.currentPage(this);
     };
+    Object.defineProperty(AddPageComponent.prototype, "diagnostic", {
+        get: function () { return JSON.stringify(this.webPage); },
+        enumerable: true,
+        configurable: true
+    });
     AddPageComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -46,9 +56,9 @@ var AddPageComponent = (function (_super) {
             styleUrls: ['add-page.component.css'],
             directives: [ng2_ckeditor_1.CKEditor, ng2_dragula_1.Dragula],
             viewProviders: [ng2_dragula_1.DragulaService],
-            providers: [ng2_toastr_1.ToastsManager]
+            providers: [web_page_service_1.WebPageService]
         }), 
-        __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService, ng2_dragula_1.DragulaService, ng2_toastr_1.ToastsManager])
+        __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService, ng2_dragula_1.DragulaService, ng2_toastr_1.ToastsManager, web_page_service_1.WebPageService])
     ], AddPageComponent);
     return AddPageComponent;
 }(module_entity_1.Module));

@@ -64,8 +64,7 @@ var PagesComponent = (function (_super) {
             templateUrl: 'pages.component.html',
             styleUrls: ['pages.component.css'],
             directives: [ng2_ckeditor_1.CKEditor, ng2_dragula_1.Dragula],
-            viewProviders: [ng2_dragula_1.DragulaService],
-            providers: [ng2_toastr_1.ToastsManager]
+            viewProviders: [ng2_dragula_1.DragulaService]
         }), 
         __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService, ng2_dragula_1.DragulaService, ng2_toastr_1.ToastsManager])
     ], PagesComponent);

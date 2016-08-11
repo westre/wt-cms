@@ -9,13 +9,15 @@ import { ModuleService } from './shared/module/module.service';
 
 import { PageService } from './shared/page/page.service';
 
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+
 @Component({
     moduleId: module.id,
     selector: 'wt-cms',
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.css'],
     directives: [HeaderComponent, FooterComponent],
-    providers: [ModuleService, PageService]
+    providers: [ModuleService, PageService, ToastsManager]
 })
 
 export class AppComponent implements OnInit { 

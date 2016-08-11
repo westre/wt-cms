@@ -14,6 +14,7 @@ var header_component_1 = require('./shared/header/header.component');
 var footer_component_1 = require('./shared/footer/footer.component');
 var module_service_1 = require('./shared/module/module.service');
 var page_service_1 = require('./shared/page/page.service');
+var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
 var AppComponent = (function () {
     function AppComponent(router, moduleService, pageService) {
         var _this = this;
@@ -43,7 +44,7 @@ var AppComponent = (function () {
             templateUrl: 'app.component.html',
             styleUrls: ['app.component.css'],
             directives: [header_component_1.HeaderComponent, footer_component_1.FooterComponent],
-            providers: [module_service_1.ModuleService, page_service_1.PageService]
+            providers: [module_service_1.ModuleService, page_service_1.PageService, ng2_toastr_1.ToastsManager]
         }), 
         __metadata('design:paramtypes', [router_1.Router, module_service_1.ModuleService, page_service_1.PageService])
     ], AppComponent);

@@ -17,8 +17,7 @@ import { WebPage } from './web-page.entity';
     templateUrl: 'pages.component.html',
     styleUrls: ['pages.component.css'],
     directives: [CKEditor, Dragula],
-    viewProviders: [DragulaService],
-    providers: [ToastsManager]
+    viewProviders: [DragulaService]
 })
 
 export class PagesComponent extends Module implements OnInit, Page { 

@@ -25,6 +25,10 @@
 .color-text { color: #424242 }
 .color-background { background-color: #fafafa }
 
+h1, h2, h3, h4, h5, h6, span, p, div {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
 html {
     position: relative;
     min-height: 100%;
