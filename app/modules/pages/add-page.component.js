@@ -21,7 +21,7 @@ var subnavigation_entity_1 = require('../../shared/sub-navigation/subnavigation.
 var ng2_ckeditor_1 = require('ng2-ckeditor');
 var ng2_dragula_1 = require('ng2-dragula/ng2-dragula');
 var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
-var web_page_entity_1 = require('./web-page.entity');
+var web_page_entity_1 = require('../../shared/web-page/web-page.entity');
 var web_page_service_1 = require('../../shared/web-page/web-page.service');
 var AddPageComponent = (function (_super) {
     __extends(AddPageComponent, _super);

@@ -16,8 +16,8 @@ var FilesComponent = (function () {
         this.pageService = pageService;
         this.title = "Files";
         this.pages = [
-            new subnavigation_entity_1.SubNavigation("index", "Index"),
-            new subnavigation_entity_1.SubNavigation("info", "Informatie")
+            new subnavigation_entity_1.SubNavigation("index", "Index", true),
+            new subnavigation_entity_1.SubNavigation("info", "Informatie", false)
         ];
     }
     FilesComponent.prototype.ngOnInit = function () {

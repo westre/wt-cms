@@ -16,8 +16,8 @@ var UsersComponent = (function () {
         this.pageService = pageService;
         this.title = "users";
         this.pages = [
-            new subnavigation_entity_1.SubNavigation("index", "Index"),
-            new subnavigation_entity_1.SubNavigation("info", "Informatie")
+            new subnavigation_entity_1.SubNavigation("index", "Index", true),
+            new subnavigation_entity_1.SubNavigation("info", "Informatie", false)
         ];
     }
     UsersComponent.prototype.ngOnInit = function () {

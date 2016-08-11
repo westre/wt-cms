@@ -20,8 +20,8 @@ import { DashboardGenericComponent } from './submodules/generic/dashboard-generi
 export class DashboardComponent extends Module implements OnInit, Page { 
     title: string = "Dashboard";
     pages: SubNavigation[] = [
-        new SubNavigation("index", "Index"),
-        new SubNavigation("info", "Informatie")
+        new SubNavigation("index", "Index", true),
+        new SubNavigation("info", "Informatie", false)
     ];
 
     constructor(private pageService: PageService, private moduleService: ModuleService) {

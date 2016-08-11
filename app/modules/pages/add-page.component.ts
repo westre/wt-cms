@@ -9,7 +9,7 @@ import { CKEditor } from 'ng2-ckeditor';
 import { Dragula, DragulaService } from 'ng2-dragula/ng2-dragula';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
-import { WebPage } from './web-page.entity';
+import { WebPage } from '../../shared/web-page/web-page.entity';
 import { WebPageService } from '../../shared/web-page/web-page.service';
 
 @Component({

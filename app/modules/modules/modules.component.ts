@@ -13,8 +13,8 @@ import { SubNavigation } from '../../shared/sub-navigation/subnavigation.entity'
 export class ModulesComponent implements OnInit, Page { 
     title: string = "modules";
     pages: SubNavigation[] = [
-        new SubNavigation("index", "Index"),
-        new SubNavigation("info", "Informatie")
+        new SubNavigation("index", "Index", true),
+        new SubNavigation("info", "Informatie", false)
     ];
 
     constructor(private pageService: PageService) {

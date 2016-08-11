@@ -29,8 +29,8 @@ var DashboardComponent = (function (_super) {
         this.moduleService = moduleService;
         this.title = "Dashboard";
         this.pages = [
-            new subnavigation_entity_1.SubNavigation("index", "Index"),
-            new subnavigation_entity_1.SubNavigation("info", "Informatie")
+            new subnavigation_entity_1.SubNavigation("index", "Index", true),
+            new subnavigation_entity_1.SubNavigation("info", "Informatie", false)
         ];
     }
     DashboardComponent.prototype.ngOnInit = function () {

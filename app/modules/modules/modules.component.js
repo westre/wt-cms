@@ -16,8 +16,8 @@ var ModulesComponent = (function () {
         this.pageService = pageService;
         this.title = "modules";
         this.pages = [
-            new subnavigation_entity_1.SubNavigation("index", "Index"),
-            new subnavigation_entity_1.SubNavigation("info", "Informatie")
+            new subnavigation_entity_1.SubNavigation("index", "Index", true),
+            new subnavigation_entity_1.SubNavigation("info", "Informatie", false)
         ];
     }
     ModulesComponent.prototype.ngOnInit = function () {
