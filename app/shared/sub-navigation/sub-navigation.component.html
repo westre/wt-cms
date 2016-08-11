@@ -1,6 +1,6 @@
 <ul class="nav nav-pills entry-link" id="sub-navigation-tab" role="tablist">
-    <li *ngFor="let page of pages; let isFirst = first" class="nav-item">
-        <a class="nav-link" [class.active]="isFirst" data-toggle="tab" href="#{{ page.key }}">{{ page.display }}</a>
+    <li *ngFor="let page of pages" class="nav-item">
+        <a class="nav-link" [class.active]="page.active" data-toggle="tab" routerLink="/{{ page.key }}">{{ page.display }}</a>
     </li>
 </ul>
 

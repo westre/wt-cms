@@ -4,13 +4,16 @@ var dashboard_component_1 = require('./modules/dashboard/dashboard.component');
 var files_component_1 = require('./modules/files/files.component');
 var modules_component_1 = require('./modules/modules/modules.component');
 var pages_component_1 = require('./modules/pages/pages.component');
+var add_page_component_1 = require('./modules/pages/add-page.component');
 var settings_component_1 = require('./modules/settings/settings.component');
 var users_component_1 = require('./modules/users/users.component');
+exports.paths = "WTF";
 exports.routes = [
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'files', component: files_component_1.FilesComponent },
     { path: 'modules', component: modules_component_1.ModulesComponent },
     { path: 'pages', component: pages_component_1.PagesComponent },
+    { path: 'pages/add', component: add_page_component_1.AddPageComponent },
     { path: 'settings', component: settings_component_1.SettingsComponent },
     { path: 'users', component: users_component_1.UsersComponent },
     {

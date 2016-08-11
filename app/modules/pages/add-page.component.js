@@ -21,55 +21,36 @@ var subnavigation_entity_1 = require('../../shared/sub-navigation/subnavigation.
 var ng2_ckeditor_1 = require('ng2-ckeditor');
 var ng2_dragula_1 = require('ng2-dragula/ng2-dragula');
 var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
-var web_page_entity_1 = require('./web-page.entity');
-var PagesComponent = (function (_super) {
-    __extends(PagesComponent, _super);
-    function PagesComponent(pageService, moduleService, dragulaService, toastrService) {
-        var _this = this;
+var AddPageComponent = (function (_super) {
+    __extends(AddPageComponent, _super);
+    function AddPageComponent(pageService, moduleService, dragulaService, toastrService) {
         _super.call(this, moduleService.getModule("PagesComponent"));
         this.pageService = pageService;
         this.moduleService = moduleService;
         this.dragulaService = dragulaService;
         this.toastrService = toastrService;
-        this.title = "Paginabeheer";
+        this.title = "Paginabeheer - tt";
         this.pages = [
-            new subnavigation_entity_1.SubNavigation("pages/", "Paginaoverzicht", true),
-            new subnavigation_entity_1.SubNavigation("pages/add", "Pagina toevoegen", false)
+            new subnavigation_entity_1.SubNavigation("pages/", "Paginaoverzicht", false),
+            new subnavigation_entity_1.SubNavigation("pages/add", "Pagina toevoegen", true)
         ];
-        this.webPages = [
-            new web_page_entity_1.WebPage("w1"),
-            new web_page_entity_1.WebPage("w2"),
-            new web_page_entity_1.WebPage("w3"),
-            new web_page_entity_1.WebPage("w4"),
-        ];
-        // test
-        this.webPages[1].isHomePage = true;
-        dragulaService.drop.subscribe(function (value) {
-            _this.onDrop(value.slice(1));
-        });
     }
-    PagesComponent.prototype.onDrop = function (args) {
-        var e = args[0], el = args[1];
-        console.log(e.id);
-        var webPage = this.webPages[e.id];
-        this.toastrService.success("Pagina succesvol van volgorde veranderd", webPage.title);
-    };
-    PagesComponent.prototype.ngOnInit = function () {
+    AddPageComponent.prototype.ngOnInit = function () {
         this.pageService.currentPage(this);
     };
-    PagesComponent = __decorate([
+    AddPageComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'pages',
-            templateUrl: 'pages.component.html',
-            styleUrls: ['pages.component.css'],
+            selector: 'add-page',
+            templateUrl: 'add-page.component.html',
+            styleUrls: ['add-page.component.css'],
             directives: [ng2_ckeditor_1.CKEditor, ng2_dragula_1.Dragula],
             viewProviders: [ng2_dragula_1.DragulaService],
             providers: [ng2_toastr_1.ToastsManager]
         }), 
         __metadata('design:paramtypes', [page_service_1.PageService, module_service_1.ModuleService, ng2_dragula_1.DragulaService, ng2_toastr_1.ToastsManager])
-    ], PagesComponent);
-    return PagesComponent;
+    ], AddPageComponent);
+    return AddPageComponent;
 }(module_entity_1.Module));
-exports.PagesComponent = PagesComponent;
-//# sourceMappingURL=pages.component.js.map
+exports.AddPageComponent = AddPageComponent;
+//# sourceMappingURL=add-page.component.js.map
