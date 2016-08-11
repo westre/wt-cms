@@ -14,6 +14,7 @@ var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
+var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,6 +26,14 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 app_routing_1.routing,
                 http_1.HttpModule
+            ],
+            providers: [
+                {
+                    provide: ng2_toastr_1.ToastOptions,
+                    useValue: new ng2_toastr_1.ToastOptions({
+                        positionClass: 'toast-bottom-right',
+                    })
+                }
             ],
             bootstrap: [app_component_1.AppComponent],
         }), 
