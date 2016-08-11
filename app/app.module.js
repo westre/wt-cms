@@ -9,23 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var NavigationComponent = (function () {
-    function NavigationComponent() {
-        this.modules = [];
+var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
+var http_1 = require('@angular/http');
+var app_component_1 = require('./app.component');
+var app_routing_1 = require('./app.routing');
+var AppModule = (function () {
+    function AppModule() {
     }
-    NavigationComponent.prototype.addModule = function (module) {
-        this.modules.push(module);
-    };
-    NavigationComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'navigation',
-            templateUrl: 'navigation.component.html',
-            styleUrls: ['navigation.component.css']
+    AppModule = __decorate([
+        core_1.NgModule({
+            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                app_routing_1.routing,
+                http_1.HttpModule
+            ],
+            bootstrap: [app_component_1.AppComponent],
         }), 
         __metadata('design:paramtypes', [])
-    ], NavigationComponent);
-    return NavigationComponent;
+    ], AppModule);
+    return AppModule;
 }());
-exports.NavigationComponent = NavigationComponent;
-//# sourceMappingURL=navigation.component.js.map
+exports.AppModule = AppModule;
+//# sourceMappingURL=app.module.js.map

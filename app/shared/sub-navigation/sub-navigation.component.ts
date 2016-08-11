@@ -11,7 +11,7 @@ import { SubNavigation } from './subnavigation.entity'
 export class SubNavigationComponent { 
     pages: SubNavigation[] = [];
 
-    setPages(pages: SubNavigation[]) : void {
+    setPages(pages: SubNavigation[]): void {
         this.pages = pages;
     }
 }

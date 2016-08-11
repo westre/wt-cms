@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var router_2 = require('@angular/router');
 var header_component_1 = require('./shared/header/header.component');
 var footer_component_1 = require('./shared/footer/footer.component');
 var module_service_1 = require('./shared/module/module.service');
@@ -43,10 +42,10 @@ var AppComponent = (function () {
             selector: 'wt-cms',
             templateUrl: 'app.component.html',
             styleUrls: ['app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES, header_component_1.HeaderComponent, footer_component_1.FooterComponent],
+            directives: [header_component_1.HeaderComponent, footer_component_1.FooterComponent],
             providers: [module_service_1.ModuleService, page_service_1.PageService]
         }), 
-        __metadata('design:paramtypes', [router_2.Router, module_service_1.ModuleService, page_service_1.PageService])
+        __metadata('design:paramtypes', [router_1.Router, module_service_1.ModuleService, page_service_1.PageService])
     ], AppComponent);
     return AppComponent;
 }());

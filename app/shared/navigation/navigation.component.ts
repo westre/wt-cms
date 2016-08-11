@@ -1,13 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 import { SystemModule } from '../module/system-module.entity';
 
 @Component({
     moduleId: module.id,
     selector: 'navigation',
     templateUrl: 'navigation.component.html',
-    styleUrls: ['navigation.component.css'],
-    directives: [ROUTER_DIRECTIVES]
+    styleUrls: ['navigation.component.css']
 })
 
 export class NavigationComponent {

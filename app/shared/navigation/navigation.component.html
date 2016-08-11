@@ -3,7 +3,7 @@
     <ul class="dropdown-menu color-text">
         <li>
             <div class="row navigation-grid">                   
-                <a *ngFor="let module of modules" class="col-sm-4 navigation-grid-item navigation-grid-item-padding" [routerLink]="module.url">
+                <a *ngFor="let module of modules" class="col-sm-4 navigation-grid-item navigation-grid-item-padding" routerLink="{{ module.url }}">
                     <div class="navigation-grid-item-box">
                         <i class="fa {{ module.image }} fa-2x color-complement-0"></i><br/>
                         <span class="text-muted">{{ module.name }}</span>
